@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::-moz-selection {
+  color: #f5f5f5;
+  background: #f97316;
+}
+
+::selection {
+  color: #f5f5f5;
+  background: #f97316;
+}
