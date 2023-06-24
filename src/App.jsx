@@ -5,14 +5,30 @@ import NotFound from "./pages/NotFound";
 
 export default function App() {
   const html = document.querySelector("html");
-  const [darkMode, setDarkMode] = useState(html.className === "dark");
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("darkMode") === null
+      ? window.matchMedia("(prefers-color-scheme: dark)").matches
+      : localStorage.getItem("darkMode") === "true"
+  );
 
   function toggleDarkMode() {
     html.classList.toggle("dark");
     setDarkMode(!darkMode);
-    document
-      .querySelector("meta[name='theme-color']")
-      .setAttribute("content", darkMode ? "#f5f5f5" : "#191919");
+    localStorage.setItem("darkMode", !darkMode);
+  }
+
+  document
+    .querySelector("meta[name='theme-color']")
+    .setAttribute("content", !darkMode ? "#f5f5f5" : "#232323");
+
+  if (localStorage.getItem("darkMode") === null) {
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? localStorage.setItem("darkMode", true)
+      : localStorage.setItem("darkMode", false);
+  } else {
+    localStorage.getItem("darkMode") === "true"
+      ? html.classList.add("dark")
+      : html.classList.remove("dark");
   }
 
   return (

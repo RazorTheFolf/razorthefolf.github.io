@@ -11,7 +11,11 @@ export default function Navbar(props) {
           to="#"
           className="flex gap-3 text-lg font-semibold items-center dark:text-cs-light text-cs-gray transition-colors ease-in-out duration-200"
         >
-          <img src={logo} alt="" className="h-10" />
+          <img
+            src={logo}
+            alt="Razor Tricksele"
+            className="h-10 select-none pointer-events-none"
+          />
           Razor ✦
         </Link>
         <ul className="flex items-center gap-4">

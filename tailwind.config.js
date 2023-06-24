@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        "cs-gray": "#191919",
+        "cs-gray": "#232323",
         "cs-light": "#f5f5f5",
       },
       keyframes: {
