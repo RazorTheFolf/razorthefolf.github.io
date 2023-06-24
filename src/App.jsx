@@ -19,12 +19,16 @@ export default function App() {
 
   document
     .querySelector("meta[name='theme-color']")
-    .setAttribute("content", !darkMode ? "#f5f5f5" : "#232323");
+    .setAttribute("content", !darkMode ? "#f5f5f5" : "#191919");
 
   if (localStorage.getItem("darkMode") === null) {
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? localStorage.setItem("darkMode", true)
-      : localStorage.setItem("darkMode", false);
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      html.classList.add("dark");
+      localStorage.setItem("darkMode", true);
+    } else {
+      html.classList.remove("dark");
+      localStorage.setItem("darkMode", false);
+    }
   } else {
     localStorage.getItem("darkMode") === "true"
       ? html.classList.add("dark")
