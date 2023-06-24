@@ -4,11 +4,12 @@ import logo from "../assets/RazorTricksele.svg";
 
 export default function Navbar(props) {
   const { toggleDarkMode, darkMode } = props;
+  document.title = "Razor's Site";
   return (
     <>
       <nav className="flex justify-between items-center m-5">
         <Link
-          to="#"
+          to="/"
           className="flex gap-3 text-lg font-semibold items-center dark:text-cs-light text-cs-gray transition-colors ease-in-out duration-200"
         >
           <img

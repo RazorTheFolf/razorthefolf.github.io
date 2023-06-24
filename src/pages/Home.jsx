@@ -18,9 +18,9 @@ export default function Home(props) {
     <>
       <Navbar {...props} />
       <main>
-        <section className="flex justify-center items-center flex-col md:flex-row-reverse gap-10 md:gap-24 xl:gap-32 mt-20 xl:mt-28">
+        <section className="flex justify-center items-center flex-col md:flex-row-reverse gap-10 md:gap-24 xl:gap-32 mt-[10vh] md:mt-[21vh]">
           <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to bg-blue-700 rounded-full h-40 w-40 md:h-44 md:w-44 xl:h-60 xl:w-60 blur-xl animate-rotate-bg"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-blue-700 rounded-full h-40 w-40 md:h-44 md:w-44 xl:h-60 xl:w-60 blur-xl animate-rotate-bg"></div>
             <img
               src={ProfilePicture}
               alt="My Razor OC :3"
@@ -28,9 +28,9 @@ export default function Home(props) {
             />
           </div>
           <div className="flex flex-col">
-            <h2 className="cursor-default text-2xl md:text-4xl font-bold text-center md:text-left text-cs-gray dark:text-cs-light transition-colors ease-in-out duration-200">
+            <h1 className="cursor-default text-2xl md:text-4xl font-bold text-center md:text-left text-cs-gray dark:text-cs-light transition-colors ease-in-out duration-200">
               Hi, I'm <span className="text-orange-500">Razor</span>
-            </h2>
+            </h1>
             <h2 className="cursor-default text-lg md:text-2xl font-semibold text-center md:text-left text-cs-gray dark:text-cs-light transition-colors ease-in-out duration-200">
               I'm a <span className="text-orange-500">IT Student</span>
             </h2>
@@ -40,12 +40,35 @@ export default function Home(props) {
                 Software Developer
               </span>
             </h2>
-            <Link
-              to="#"
-              className="self-center md:self-start bg-black rounded-2xl text-xl text-cs-light my-5 w-fit py-3 px-7 select-none"
-            >
-              Contact Me
-            </Link>
+            <div className="flex flex-col items-center justify-center md:flex-row md:justify-start md:gap-5">
+              <Link
+                to="/contact"
+                className="self-center md:self-start bg-black rounded-2xl text-xl text-cs-light my-5 w-fit py-3 px-7 select-none hover:scale-110 transition ease-in-out duration-200"
+              >
+                Contact Me
+              </Link>
+              <Link
+                to="/work"
+                className="flex items-center gap-3 text-cs-gray dark:text-cs-light pl-3 md:pl-0 text-xl transition ease-in-out duration-200"
+              >
+                See my Work
+                <svg
+                  viewBox="0 0 5 16"
+                  height="10"
+                  width="30"
+                  xmlns="http://www.w3.org/2000/svg"
+                  id="arrow-horizontal"
+                >
+                  <path
+                    className="text-cs-gray dark:text-cs-light transition-colors ease-in-out duration-200"
+                    fill="currentColor"
+                    d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                    data-name="Path 10"
+                    id="Path_10"
+                  ></path>
+                </svg>
+              </Link>
+            </div>
           </div>
         </section>
         {matches ? (
