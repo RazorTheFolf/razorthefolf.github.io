@@ -19,7 +19,7 @@ export default function App() {
 
   document
     .querySelector("meta[name='theme-color']")
-    .setAttribute("content", !darkMode ? "#f5f5f5" : "#191919");
+    .setAttribute("content", !darkMode ? "#f5f5f5" : "#232323");
 
   if (localStorage.getItem("darkMode") === null) {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
