@@ -13,9 +13,27 @@ export default {
           from: { transform: "rotate(0deg)" },
           to: { transform: "rotate(360deg)" },
         },
+        typing: {
+          "0%": {
+            width: "0%",
+            visibility: "hidden",
+          },
+          "100%": {
+            width: "100%",
+          },
+        },
+        blink: {
+          "50%": {
+            borderColor: "transparent",
+          },
+          "100%": {
+            borderColor: "white",
+          },
+        },
       },
       animation: {
         "rotate-bg": "rotate-bg 3s linear infinite",
+        typing: "typing 2s steps(20) alternate, blink .7s infinite",
       },
     },
     plugins: [],

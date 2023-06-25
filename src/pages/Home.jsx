@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 export default function Home(props) {
+  document.title = "Razor's Site | Home";
   const [matches, setMatches] = useState(
     window.matchMedia("(min-width: 768px)").matches
   );
@@ -20,7 +21,6 @@ export default function Home(props) {
   console.log(
     "You can check the code here: https://github.com/RazorTheWolf/razorthewolf.github.io"
   );
-
   return (
     <>
       <Navbar {...props} />
@@ -34,13 +34,16 @@ export default function Home(props) {
               className="relative rounded-full h-40 w-40 md:h-44 md:w-44 xl:h-60 xl:w-60 select-none pointer-events-none"
             />
           </div>
-          <div className="flex flex-col">
-            <h1 className="cursor-default text-2xl md:text-4xl font-bold text-center md:text-left text-cs-gray dark:text-cs-light transition-colors ease-in-out duration-200">
-              Hi, I'm{" "}
-              <span className="bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
-                Razor
-              </span>
-            </h1>
+          <div className="flex flex-col items-center md:items-start">
+            <div className="w-max">
+              <h1 className="cursor-default text-2xl md:text-4xl font-bold text-center md:text-left text-cs-gray dark:text-cs-light transition-colors ease-in-out duration-200 animate-typing border-r-4 w-max border-r-white overflow-hidden whitespace-nowrap">
+                Hi, I'm{" "}
+                <span className="bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+                  Razor
+                </span>
+              </h1>
+            </div>
+
             <h2 className="cursor-default text-lg md:text-2xl font-semibold text-center md:text-left text-cs-gray dark:text-cs-light transition-colors ease-in-out duration-200">
               I'm a <span className="text-orange-500">IT Student</span>
             </h2>
@@ -50,16 +53,16 @@ export default function Home(props) {
                 Software Developer
               </span>
             </h2>
-            <div className="flex flex-col items-center justify-center md:flex-row md:justify-start md:gap-5">
+            <div className="flex flex-row items-center justify-center md:justify-start gap-5">
               <Link
                 to="/contact"
-                className="self-center md:self-start bg-black rounded-2xl text-xl text-cs-light my-5 w-fit py-3 px-7 select-none hover:scale-110 transition ease-in-out duration-200"
+                className="self-center md:self-start bg-black rounded-2xl text-xl text-cs-light my-5 w-fit py-3 px-7 select-none"
               >
                 Contact Me
               </Link>
               <Link
                 to="/work"
-                className="flex items-center gap-3 text-cs-gray dark:text-cs-light pl-3 md:pl-0 text-xl transition ease-in-out duration-200"
+                className="flex items-center gap-3 text-cs-gray dark:text-cs-light text-xl transition ease-in-out duration-200"
               >
                 See my Work
                 <svg

@@ -34,7 +34,6 @@ export default function App() {
       ? html.classList.add("dark")
       : html.classList.remove("dark");
   }
-
   return (
     <>
       <Routes>

@@ -4,7 +4,6 @@ import logo from "../assets/RazorTricksele.svg";
 
 export default function Navbar(props) {
   const { toggleDarkMode, darkMode } = props;
-  document.title = "Razor's Site";
   return (
     <>
       <nav className="flex justify-between items-center m-5">
