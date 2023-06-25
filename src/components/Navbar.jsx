@@ -14,7 +14,7 @@ export default function Navbar(props) {
           <img
             src={logo}
             alt="Razor Tricksele"
-            className="h-10 select-none pointer-events-none"
+            className="h-10 w-10 select-none pointer-events-none"
           />
           Razor ✦
         </Link>
