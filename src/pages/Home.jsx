@@ -14,6 +14,13 @@ export default function Home(props) {
       .addEventListener("change", (e) => setMatches(e.matches));
   }, []);
 
+  console.log("Hewoo :3");
+  console.log("I'm glad you're here :D");
+  console.log("So you're a developer too ?");
+  console.log(
+    "You can check the code here: https://github.com/RazorTheWolf/razorthewolf.github.io"
+  );
+
   return (
     <>
       <Navbar {...props} />
@@ -29,7 +36,10 @@ export default function Home(props) {
           </div>
           <div className="flex flex-col">
             <h1 className="cursor-default text-2xl md:text-4xl font-bold text-center md:text-left text-cs-gray dark:text-cs-light transition-colors ease-in-out duration-200">
-              Hi, I'm <span className="text-orange-500">Razor</span>
+              Hi, I'm{" "}
+              <span className="bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
+                Razor
+              </span>
             </h1>
             <h2 className="cursor-default text-lg md:text-2xl font-semibold text-center md:text-left text-cs-gray dark:text-cs-light transition-colors ease-in-out duration-200">
               I'm a <span className="text-orange-500">IT Student</span>
