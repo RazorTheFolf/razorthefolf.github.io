@@ -17,7 +17,7 @@ export default function Contact(props) {
     <>
       <Navbar {...props} />
       <main>
-        <section className="flex items-center justify-center flex-col h-[80vh] gap-5 overflow-hidden">
+        <section className="flex items-center justify-center flex-col h-[70vh] gap-5 overflow-hidden">
           <h1 className="text-2xl font-semibold dark:text-cs-light text-cs-gray transition-colors ease-in-out duration-200 underline underline-offset-1 decoration-orange-500 decoration-2">
             You can find me on..
           </h1>
