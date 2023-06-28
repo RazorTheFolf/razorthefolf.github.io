@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Work from "./pages/Work";
 import NotFound from "./pages/NotFound";
 
 export default function App() {
@@ -40,6 +42,16 @@ export default function App() {
         <Route
           path="/"
           element={<Home toggleDarkMode={toggleDarkMode} darkMode={darkMode} />}
+        />
+        <Route
+          path="/contact"
+          element={
+            <Contact toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+          }
+        />
+        <Route
+          path="/work"
+          element={<Work toggleDarkMode={toggleDarkMode} darkMode={darkMode} />}
         />
         <Route path="*" element={<NotFound />} />
       </Routes>

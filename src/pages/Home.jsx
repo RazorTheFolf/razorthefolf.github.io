@@ -36,7 +36,7 @@ export default function Home(props) {
           </div>
           <div className="flex flex-col items-center md:items-start">
             <div className="w-max">
-              <h1 className="cursor-default text-2xl md:text-4xl font-bold text-center md:text-left text-cs-gray dark:text-cs-light transition-colors ease-in-out duration-200 animate-typing border-r-4 w-max border-r-white overflow-hidden whitespace-nowrap">
+              <h1 className="cursor-default text-2xl md:text-4xl font-bold text-center md:text-left text-cs-gray dark:text-cs-light transition-colors ease-in-out duration-200 animate-typing border-r-4 w-max dark:border-r-white border-r-black overflow-hidden whitespace-nowrap">
                 Hi, I'm{" "}
                 <span className="bg-gradient-to-r from-orange-500 to-orange-300 bg-clip-text text-transparent">
                   Razor

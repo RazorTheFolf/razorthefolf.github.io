@@ -21,7 +21,7 @@ export default function Navbar(props) {
         <ul className="flex items-center gap-4">
           <button
             onClick={() => toggleDarkMode()}
-            className="active:rotate-180 transition ease-in-out duration-200"
+            className="active:rotate-180 transition ease-in-out duration-200 md:hover:bg-gray-600 rounded-full p-1 group"
           >
             {darkMode ? (
               <svg
@@ -39,7 +39,7 @@ export default function Navbar(props) {
               </svg>
             ) : (
               <svg
-                className="text-cs-gray transition-colors ease-in-out duration-200"
+                className="text-cs-gray md:group-hover:text-cs-light transition-colors ease-in-out duration-200"
                 height="26"
                 width="26"
                 fill="none"
@@ -56,11 +56,15 @@ export default function Navbar(props) {
               </svg>
             )}
           </button>
-          <a href="https://github.com/RazorTheWolf" target="_blank">
+          <a
+            href="https://github.com/RazorTheWolf"
+            target="_blank"
+            className="md:hover:bg-gray-600 rounded-full p-1 group transition-colors ease-in-out duration-200"
+          >
             <svg
-              className="dark:text-cs-light text-cs-gray transition-colors ease-in-out duration-200"
-              height="26"
-              width="26"
+              className="dark:text-cs-light text-cs-gray md:group-hover:text-cs-light transition-colors ease-in-out duration-200"
+              height="25"
+              width="25"
               fill="currentColor"
               viewBox="0 0 512 512"
               xmlns="http://www.w3.org/2000/svg"
