@@ -49,10 +49,6 @@ export default function App() {
             <Contact toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
           }
         />
-        <Route
-          path="/work"
-          element={<Work toggleDarkMode={toggleDarkMode} darkMode={darkMode} />}
-        />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
