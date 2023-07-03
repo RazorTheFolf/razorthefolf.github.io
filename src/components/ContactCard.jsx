@@ -7,7 +7,7 @@ export default function ContactCard(props) {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
-            className="w-5 h-5 text-cs-light"
+            className="w-5 h-5 text-cs-gray dark:text-cs-light transition-colors ease-in-out duration-200"
           >
             <path
               fill="currentColor"
@@ -20,7 +20,7 @@ export default function ContactCard(props) {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 127.14 96.36"
-            className="w-5 h-5 text-cs-light"
+            className="w-5 h-5 text-cs-gray dark:text-cs-light transition-colors ease-in-out duration-200"
           >
             <path
               fill="currentColor"
@@ -35,16 +35,16 @@ export default function ContactCard(props) {
             x="0px"
             y="0px"
             viewBox="0 0 511.999 511.999"
-            className="w-5 h-5 text-cs-light"
+            className="w-5 h-5  text-cs-gray dark:text-cs-light transition-colors ease-in-out duration-200"
           >
             <path
-              fill="#C3C3C7"
+              fill="currentColor"
               d="M165.323,267.452L395.89,125.446c4.144-2.545,8.407,3.058,4.849,6.359L210.454,308.684
        c-6.688,6.226-11.003,14.558-12.225,23.602l-6.482,48.036c-0.858,6.414-9.868,7.05-11.638,0.843l-24.929-87.595
        C152.325,283.578,156.486,272.907,165.323,267.452z"
             />
             <path
-              fill="#DEDEE0"
+              fill="currentColor"
               d="M9.043,246.86l117.975,44.032l45.664,146.854c2.922,9.405,14.423,12.882,22.057,6.641l65.761-53.61
        c6.893-5.617,16.712-5.897,23.916-0.667l118.61,86.113c8.166,5.936,19.736,1.461,21.784-8.407l86.888-417.947
        c2.236-10.779-8.356-19.772-18.62-15.802L8.905,220.845C-3.043,225.453-2.939,242.369,9.043,246.86z M165.323,267.452
@@ -58,7 +58,7 @@ export default function ContactCard(props) {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
-            className="w-6 h-6 text-cs-light"
+            className="w-6 h-6 text-cs-gray dark:text-cs-light transition-colors ease-in-out duration-200"
           >
             <path
               fill="currentColor"
@@ -74,7 +74,7 @@ export default function ContactCard(props) {
     <>
       <a
         href={href}
-        className="flex justify-center items-center text-cs-gray dark:text-cs-light gap-2 font-thin transition-colors ease-in-out duration-200"
+        className="flex justify-center items-center text-cs-gray dark:text-cs-light gap-2 font-thin"
       >
         {renderSwitch(type)}
         <span className="hover:bg-gradient-to-r hover:from-orange-600 hover:to-orange-300 hover:bg-clip-text hover:text-transparent underline underline-offset-1 transition-colors ease-in-out duration-200">

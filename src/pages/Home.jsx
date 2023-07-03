@@ -59,7 +59,7 @@ export default function Home(props) {
                 <div className="absolute md:-inset-0.5 md:bg-gradient-to-r md:from-orange-600 md:to-blue-700 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition ease-in-out duration-200"></div>
                 <Link
                   to="/work"
-                  className="relative flex items-center gap-3 text-cs-gray dark:text-cs-light text-xl bg-black rounded-2xl py-3 px-7 transition ease-in-out duration-200"
+                  className="relative flex items-center gap-3 text-cs-light text-xl bg-black rounded-2xl py-3 px-7"
                 >
                   See my Work
                   <svg
@@ -70,7 +70,7 @@ export default function Home(props) {
                     id="arrow-horizontal"
                   >
                     <path
-                      className="text-cs-gray dark:text-cs-light transition-colors ease-in-out duration-200"
+                      className="text-cs-light"
                       fill="currentColor"
                       d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
                       data-name="Path 10"
