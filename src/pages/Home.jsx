@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import ProfilePicture from "../assets/profile_picture.webp";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import ContactCard from "../components/ContactCard";
 
 export default function Home(props) {
   document.title = "Razor's Site | Home";
@@ -53,34 +54,53 @@ export default function Home(props) {
                 Software Developer
               </span>
             </h2>
-            <div className="flex flex-row items-center justify-center md:justify-start gap-5">
-              <Link
-                to="/contact"
-                className="self-center md:self-start bg-black rounded-2xl text-xl text-cs-light my-5 w-fit py-3 px-7 select-none"
-              >
-                Contact Me
-              </Link>
-              <Link
-                to="/work"
-                className="flex items-center gap-3 text-cs-gray dark:text-cs-light text-xl transition ease-in-out duration-200"
-              >
-                See my Work
-                <svg
-                  viewBox="0 0 5 16"
-                  height="10"
-                  width="30"
-                  xmlns="http://www.w3.org/2000/svg"
-                  id="arrow-horizontal"
+            <div className="flex flex-col items-center justify-center md:justify-start gap-5 my-5">
+              <div className="relative group md:self-start">
+                <div className="absolute md:-inset-0.5 md:bg-gradient-to-r md:from-orange-600 md:to-blue-700 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition ease-in-out duration-200"></div>
+                <Link
+                  to="/work"
+                  className="relative flex items-center gap-3 text-cs-gray dark:text-cs-light text-xl bg-black rounded-2xl py-3 px-7 transition ease-in-out duration-200"
                 >
-                  <path
-                    className="text-cs-gray dark:text-cs-light transition-colors ease-in-out duration-200"
-                    fill="currentColor"
-                    d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
-                    data-name="Path 10"
-                    id="Path_10"
-                  ></path>
-                </svg>
-              </Link>
+                  See my Work
+                  <svg
+                    viewBox="0 0 5 16"
+                    height="10"
+                    width="30"
+                    xmlns="http://www.w3.org/2000/svg"
+                    id="arrow-horizontal"
+                  >
+                    <path
+                      className="text-cs-gray dark:text-cs-light transition-colors ease-in-out duration-200"
+                      fill="currentColor"
+                      d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                      data-name="Path 10"
+                      id="Path_10"
+                    ></path>
+                  </svg>
+                </Link>
+              </div>
+              <section className="flex justify-center items-center flex-wrap w-[300px] md:w-fit gap-3">
+                <ContactCard
+                  href="https://discord.com/users/razorthewolf"
+                  type="discord"
+                  text="razorthewolf"
+                />
+                <ContactCard
+                  href="https://twitter.com/Razorthewolf_"
+                  type="twitter"
+                  text="@Razorthewolf_"
+                />
+                <ContactCard
+                  href="https://t.me/RazorTheWolf25"
+                  type="telegram"
+                  text="@RazorTheWolf25"
+                />
+                <ContactCard
+                  href="https://steamcommunity.com/id/RazorTheWolf_/"
+                  type="steam"
+                  text="RazorTheWolf"
+                />
+              </section>
             </div>
           </div>
         </section>

@@ -1,5 +1,5 @@
 export default function ContactCard(props) {
-  const { href, accent, tag, text, type } = props;
+  const { href, text, type } = props;
   function renderSwitch(type) {
     switch (type) {
       case "twitter":
@@ -7,7 +7,7 @@ export default function ContactCard(props) {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
-            className="w-10 h-10 text-cs-light"
+            className="w-5 h-5 text-cs-light"
           >
             <path
               fill="currentColor"
@@ -20,7 +20,7 @@ export default function ContactCard(props) {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 127.14 96.36"
-            className="w-10 h-10 text-cs-light"
+            className="w-5 h-5 text-cs-light"
           >
             <path
               fill="currentColor"
@@ -35,7 +35,7 @@ export default function ContactCard(props) {
             x="0px"
             y="0px"
             viewBox="0 0 511.999 511.999"
-            className="w-8 h-10 text-cs-light"
+            className="w-5 h-5 text-cs-light"
           >
             <path
               fill="#C3C3C7"
@@ -58,7 +58,7 @@ export default function ContactCard(props) {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
-            className="w-10 h-10 text-cs-light"
+            className="w-6 h-6 text-cs-light"
           >
             <path
               fill="currentColor"
@@ -72,20 +72,14 @@ export default function ContactCard(props) {
   }
   return (
     <>
-      <a href={href} className="shadow-2xl">
-        <figure
-          className="flex items-center w-80 justify-center rounded p-3 gap-3 text-cs-light"
-          style={{ backgroundColor: accent }}
-        >
-          <div className="flex items-center gap-2">
-            {renderSwitch(type)}
-            <span className="font-semibold">{tag}</span>
-          </div>
-          <span>|</span>
-          <figcaption className="text-cs-light bg-gray-600/40 rounded p-1">
-            {text}
-          </figcaption>
-        </figure>
+      <a
+        href={href}
+        className="flex justify-center items-center text-cs-gray dark:text-cs-light gap-2 font-thin transition-colors ease-in-out duration-200"
+      >
+        {renderSwitch(type)}
+        <span className="hover:bg-gradient-to-r hover:from-orange-600 hover:to-orange-300 hover:bg-clip-text hover:text-transparent underline underline-offset-1 transition-colors ease-in-out duration-200">
+          {text}
+        </span>
       </a>
     </>
   );
