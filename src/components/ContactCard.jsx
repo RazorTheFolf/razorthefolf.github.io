@@ -77,7 +77,7 @@ export default function ContactCard(props) {
         className="flex justify-center items-center text-cs-gray dark:text-cs-light gap-2 font-thin"
       >
         {renderSwitch(type)}
-        <span className="hover:bg-gradient-to-r hover:from-orange-600 hover:to-orange-300 hover:bg-clip-text hover:text-transparent underline underline-offset-1 transition-colors ease-in-out duration-200">
+        <span className="md:hover:bg-gradient-to-r md:hover:from-orange-600 md:hover:to-orange-300 md:hover:bg-clip-text md:hover:text-transparent underline underline-offset-1 transition-colors ease-in-out duration-200">
           {text}
         </span>
       </a>

@@ -26,7 +26,7 @@ export default function Home(props) {
     <>
       <Navbar {...props} />
       <main>
-        <section className="flex justify-center items-center flex-col md:flex-row-reverse gap-10 md:gap-24 xl:gap-32 mt-[10vh] md:mt-[21vh]">
+        <section className="flex justify-center items-center flex-col md:flex-row-reverse gap-10 md:gap-24 xl:gap-32 mt-[10vh] md:mt-[23vh]">
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-blue-700 rounded-full h-40 w-40 md:h-44 md:w-44 xl:h-60 xl:w-60 blur-xl animate-rotate-bg"></div>
             <img
