@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import PrimaryBtn from "../components/Primary-Btn";
 
 export default function NotFound() {
   document.title = "404 | Not Found";
@@ -14,12 +14,7 @@ export default function NotFound() {
         <h2 className="text-cs-gray dark:text-cs-light text-xl">
           Uh, oh there is nothing to see here 👀
         </h2>
-        <Link
-          to="/"
-          className="bg-black rounded-2xl text-md text-cs-light w-fit py-3 px-7 select-none"
-        >
-          Back Home ?
-        </Link>
+        <PrimaryBtn text="Back Home" href="/" />
       </main>
     </>
   );
