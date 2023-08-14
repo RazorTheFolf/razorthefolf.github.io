@@ -16,13 +16,6 @@ export default function Home(props) {
       .matchMedia("(min-width: 768px)")
       .addEventListener("change", (e) => setMatches(e.matches));
   }, []);
-
-  console.log("Hewoo :3");
-  console.log("I'm glad you're here :D");
-  console.log("So you're a developer too ?");
-  console.log(
-    "You can check the code here: https://github.com/RazorTheWolf/razorthewolf.github.io"
-  );
   return (
     <>
       <Navbar {...props} />
