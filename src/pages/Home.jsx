@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar";
 import ProfilePicture from "../assets/profile_picture.webp";
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ContactCard from "../components/ContactCard";
 import PrimaryBtn from "../components/Primary-Btn";
@@ -61,7 +60,7 @@ export default function Home(props) {
                 />
                 <ContactCard
                   href="https://twitter.com/Razorthewolf_"
-                  type="twitter"
+                  type="x"
                   text="@Razorthewolf_"
                 />
                 <ContactCard
