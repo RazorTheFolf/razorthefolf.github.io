@@ -41,7 +41,7 @@ jobs:
         run: npm run build
       - name: Copy index.html as 404.html
         run: cp ./dist/index.html ./dist/404.html
-      - name: Create Discord domain file
+      - name: Create Discord domain directory
         run: mkdir ./dist/.well-known
       - name: Create Discord domain file
         run: touch ./dist/.well-known/discord.txt
