@@ -41,14 +41,6 @@ jobs:
         run: npm run build
       - name: Copy index.html as 404.html
         run: cp ./dist/index.html ./dist/404.html
-      - name: Create .well-known directory
-        run: mkdir ./dist/.well-known
-      - name: Create .well-known/discord directory
-        run: mkdir ./dist/.well-known/discord
-      - name: Create Discord domain file
-        run: touch ./dist/.well-known/discord/index.txt
-      - name: Setup Discord verfication for domains 
-        run: cp ./.well-known ./dist/.well-known/discord/index.txt
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
