@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Work from "./pages/Work";
 import NotFound from "./pages/NotFound";
+import Discord from "./pages/Discord";
 
 export default function App() {
   const html = document.querySelector("html");
@@ -43,6 +44,7 @@ export default function App() {
           element={<Home toggleDarkMode={toggleDarkMode} darkMode={darkMode} />}
         />
         <Route path="*" element={<NotFound />} />
+        <Route path="/.well-known/discord" element={<Discord />} />
       </Routes>
     </>
   );
