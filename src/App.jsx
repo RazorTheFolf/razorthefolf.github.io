@@ -1,10 +1,15 @@
 import { useState } from "react";
+import ProfilePicture from "./assets/profile_picture.webp";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Work from "./pages/Work";
 import NotFound from "./pages/NotFound";
 
 export default function App() {
+  const thumbnail = document.createElement("meta");
+  thumbnail.setAttribute("prorpety", "og:image");
+  thumbnail.content = ProfilePicture;
+  document.getElementsByTagName("head")[0].appendChild(thumbnail);
   const html = document.querySelector("html");
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("darkMode") === null

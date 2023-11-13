@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import ProfilePicture from "../assets/profile_picture.webp";
 import { useEffect, useState } from "react";
 import ContactCard from "../components/ContactCard";
 import PrimaryBtn from "../components/Primary-Btn";
@@ -22,7 +23,7 @@ export default function Home(props) {
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-blue-700 rounded-full h-40 w-40 md:h-44 md:w-44 xl:h-60 xl:w-60 blur-xl animate-rotate-bg"></div>
             <img
-              src="%PUBLIC_URL%/Profile_picture.webp"
+              src={ProfilePicture}
               alt="My Razor OC :3"
               className="relative rounded-full h-40 w-40 md:h-44 md:w-44 xl:h-60 xl:w-60 select-none pointer-events-none"
             />
