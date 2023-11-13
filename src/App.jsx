@@ -6,9 +6,6 @@ import Work from "./pages/Work";
 import NotFound from "./pages/NotFound";
 
 export default function App() {
-  const thumbnail = document.createElement("meta");
-  thumbnail.setAttribute("prorpety", "twitter:image");
-  thumbnail.content = "https://razorthewolf.github.io" + ProfilePicture;
   document.getElementsByTagName("head")[0].appendChild(thumbnail);
   const html = document.querySelector("html");
   const [darkMode, setDarkMode] = useState(
