@@ -8,7 +8,7 @@ import NotFound from "./pages/NotFound";
 export default function App() {
   const thumbnail = document.createElement("meta");
   thumbnail.setAttribute("prorpety", "og:thumbnail_url");
-  thumbnail.content = ProfilePicture;
+  thumbnail.content = "https://razorthewolf.github.io" + ProfilePicture;
   document.getElementsByTagName("head")[0].appendChild(thumbnail);
   const html = document.querySelector("html");
   const [darkMode, setDarkMode] = useState(
