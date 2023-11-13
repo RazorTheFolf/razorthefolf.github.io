@@ -6,7 +6,6 @@ import Work from "./pages/Work";
 import NotFound from "./pages/NotFound";
 
 export default function App() {
-  document.getElementsByTagName("head")[0].appendChild(thumbnail);
   const html = document.querySelector("html");
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("darkMode") === null
