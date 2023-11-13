@@ -18,10 +18,6 @@ export default function App() {
     localStorage.setItem("darkMode", !darkMode);
   }
 
-  document
-    .querySelector("meta[name='theme-color']")
-    .setAttribute("content", !darkMode ? "#f5f5f5" : "#232323");
-
   if (localStorage.getItem("darkMode") === null) {
     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       html.classList.add("dark");
@@ -35,6 +31,13 @@ export default function App() {
       ? html.classList.add("dark")
       : html.classList.remove("dark");
   }
+
+  if (navigator.userAgent.includes("Safari")) {
+    document
+      .querySelector("meta[name='theme-color']")
+      .setAttribute("content", !darkMode ? "#f5f5f5" : "#232323");
+  }
+
   return (
     <>
       <Routes>
