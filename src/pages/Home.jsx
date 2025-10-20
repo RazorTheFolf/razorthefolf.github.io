@@ -54,24 +54,24 @@ export default function Home(props) {
               </div>
               <section className="flex justify-center items-center flex-wrap w-[300px] md:w-fit gap-3">
                 <ContactCard
-                  href="https://discord.com/users/razorthewolf"
+                  href="https://discord.com/users/razorthefolf"
                   type="discord"
-                  text="razorthewolf"
+                  text="razorthefolf"
                 />
                 <ContactCard
-                  href="https://twitter.com/Razorthewolf_"
+                  href="https://twitter.com/RazortheFolf"
                   type="x"
-                  text="@Razorthewolf_"
+                  text="@Razorthefolf"
                 />
                 <ContactCard
-                  href="https://t.me/RazorTheWolf25"
+                  href="https://t.me/RazorTheFolf"
                   type="telegram"
-                  text="@RazorTheWolf25"
+                  text="@RazorTheFolf"
                 />
                 <ContactCard
-                  href="https://steamcommunity.com/id/RazorTheWolf_/"
+                  href="https://steamcommunity.com/id/RazorTheFolf/"
                   type="steam"
-                  text="RazorTheWolf"
+                  text="RazorThefolf"
                 />
               </section>
             </div>
@@ -140,3 +140,4 @@ export default function Home(props) {
     </>
   );
 }
+
