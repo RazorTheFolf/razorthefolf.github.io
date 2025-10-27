@@ -1,15 +1,63 @@
-@import "tailwindcss";
+:root {
+  /* color palette */
+  --color-light-base: #f8f4e3;
+  --color-light-200: #f7f2de;
+  --color-light-300: #f3ecce;
+  --color-light-400: #efe6bd;
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-dark-base: #292929;
+  --color-dark-300: #333333;
+  --color-dark-200: #3d3d3d;
+  --color-dark-100: #474747;
+
+  --color-accent-base: #ff773d;
+  --color-accent-300: #ff8d5c;
+  --color-accent-200: #ff9b70;
+  --color-accent-100: #ffa985;
+
+  /* color utility */
+  --color-background: var(var(--color-light-base));
+  --color-text: var(var(--color-dark-base));
+
+  /* font sizes */
+  --text-9xl: 8rem;
+  --text-8xl: 6rem;
+  --text-7xl: 4.5rem;
+  --text-6xl: 3.75rem;
+  --text-5xl: 3rem;
+  --text-4xl: 2.25rem;
+  --text-3xl: 1.875rem;
+  --text-2xl: 1.5rem;
+  --text-xl: 1.25rem;
+  --text-lg: 1.125rem;
+  --text-base: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+[data-theme="light"] {
+  color: var(--color-dark-base);
+  background-color: var(--color-light-base);
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+  --color-background: var(var(--color-light-base));
+  --color-text: var(var(--color-dark-base));
+}
+
+[data-theme="dark"] {
+  color: var(--color-light-base);
+  background-color: var(--color-dark-base);
+
+  --color-background: var(var(--color-dark-base));
+  --color-text: var(var(--color-light-base));
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-background);
 }
